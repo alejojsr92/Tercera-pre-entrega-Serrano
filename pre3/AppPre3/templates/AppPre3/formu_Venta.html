@@ -1,0 +1,33 @@
+{% extends "AppPre3/padre.html" %}
+
+{% load static %} 
+
+
+{% block titulo1 %}
+
+FORMULARIO DE VENTA
+
+{% endblock %}
+
+
+{% block texto1 %}
+Porfavor completa los campos con lo datos de tu venta
+    <form action="" method="POST" style="margin-left: 25%; color: white;"> {% csrf_token %}
+        <table>
+            {{formVenta.as_table}}
+        </table>
+
+        <input type="submit" value="Confirmar" class="btn btn-primary btn-xl" style="margin-left: -25%;margin-top: 1%;">
+
+    </form>
+    {% endblock %}
+
+    {% block botones %}
+    
+    <h2 class="text-white mt-0">Formularios y busqueda</h2>
+    <hr class="divider divider-light" />
+    <p class="text-white-75 mb-4">Recomendacion: Escoge cualquier formulario, despues podras escoger busqueda</p>
+    <a class="btn btn-light btn-xl" href="{% url 'Compra' %}">Compras</a>
+    <a class="btn btn-light btn-xl" href="{% url 'Formulario Usuario' %}">Usuario</a>
+    
+    {% endblock %}

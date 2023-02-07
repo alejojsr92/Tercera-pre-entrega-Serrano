@@ -1,0 +1,31 @@
+{% extends "AppPre3/padre.html" %}
+
+{% load static %} 
+
+
+{% block titulo1 %}
+
+BUSQUEDA DE COMPRA
+
+{% endblock %}
+
+
+{% block texto1 %}
+Porfavor indica que compra deseaas buscar 
+    <form action="/AppPre3/resul_Compra/" method="GET">
+
+        <input type="text" name="compra" id="compra">
+        <input type="submit" value="Buscar" class="btn btn-primary btn-xl">
+
+    </form>
+    {% endblock %}
+
+    {% block botones %}
+    
+    <h2 class="text-white mt-0">Formularios y busqueda</h2>
+    <hr class="divider divider-light" />
+    <p class="text-white-75 mb-4">Recomendacion: Escoge cualquier formulario, despues podras escoger busqueda</p>
+    <a class="btn btn-light btn-xl" href="{% url 'Venta' %}">Ventas</a>
+    <a class="btn btn-light btn-xl" href="{% url 'Formulario Usuario' %}">Usuario</a>
+    
+    {% endblock %}

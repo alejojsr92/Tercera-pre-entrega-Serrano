@@ -1,0 +1,24 @@
+{% extends "AppPre3/padre.html" %}
+
+{% load static %} 
+
+
+{% block titulo1 %}
+
+ESPACIO DE COMPRAS
+
+{% endblock %}
+
+{% block texto1 %}
+Aqui podras escoger entre el formulaio de Compras o Busqueda de Compras
+{% endblock %}
+
+{% block botones %}
+<h2 class="text-white mt-0">Formularios y busqueda</h2>
+<hr class="divider divider-light" />
+<p class="text-white-75 mb-4">Recomendacion: Escoge cualquier formulario, despues podras escoger busqueda</p>
+<a class="btn btn-light btn-xl" href="{% url 'Formulario Compra' %}">Formulario</a>
+<a class="btn btn-light btn-xl" href="{% url 'Busqueda Compra' %}">Busqueda</a>
+
+
+{% endblock %}
