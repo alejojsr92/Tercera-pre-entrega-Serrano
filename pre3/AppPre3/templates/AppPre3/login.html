@@ -1,0 +1,23 @@
+{% extends "AppPre3/padre.html" %}
+
+{% load static %} 
+
+
+{% block titulo1 %}
+
+Ingresa tu usuario y contraseña para iniciar sesión, si no los tienes crealos aqui:
+<a class="btn btn-primary btn-xl" href="{% url 'Registro' %}">Registrate</a>
+
+{% endblock %}
+
+{% block texto1 %}
+
+<form action="" method="POST" class="text-white font-weight-bold"> {% csrf_token %}
+
+{{formulario.as_p}}
+
+<button type="submit" class="btn btn-primary btn-xl">Iniciar sesion</button>
+
+</form>
+
+{% endblock %}

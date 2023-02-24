@@ -5,3 +5,4 @@ from AppPre3.models import *
 admin.site.register(usuario)
 admin.site.register(venta)
 admin.site.register(compra)
+admin.site.register(Avatar)

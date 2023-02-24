@@ -1,0 +1,22 @@
+{% extends "AppPre3/padre.html" %}
+
+{% load static %} 
+
+
+{% block titulo1 %}
+
+HOOOOOLAAAAAA!!!!!!!!!!
+
+{% endblock %}
+
+{% block texto %}
+
+<form action="" method="POST" enctype="multipart/form-data" class="text-white font-weight-bold"> {% csrf_token %}
+
+{{formulario.as_p}}
+
+<button type="submit" class="btn btn-primary btn-xl">Enviar</button>
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "AppPre3/padre.html" %}
+
+{% load static %} 
+
+
+{% block titulo1 %}
+
+HOOOOOLAAAAAA!!!!!!!!!!
+
+{% endblock %}
+
+{% block texto1 %}
+    {% for x in datos %}
+    
+    <p>Nombre: {{x.nombre}}</p>
+    <p>DNI: {{x.DNI}}</p>
+    <p>Email: {{x.email}}</p>
+    <p>Pais: {{x.pais}}</p>
+
+    <button style="background: #f4623a; border-radius: 50px;">
+        <a style="color: white;" href="{% url 'Editar Usuario' x.nombre %}">Editar Usuario</a>
+    </button>
+
+    <button style="background: #f4623a; border-radius: 50px;">    
+        <a style="color: white;" href="{% url 'Eliminar Usuario' x.nombre %}">Eliminar Usuario</a>
+    </button>
+
+    {% endfor %}
+
+    {% endblock %}
+    <a class="btn btn-primary btn-xl" href="#about">COMENCEMOS</a>
+    {% block botones %}
+    
+    <h2 class="text-white mt-0">Formularios y busqueda</h2>
+    <hr class="divider divider-light" />
+    <p class="text-white-75 mb-4">Recomendacion: Escoge cualquier formulario, despues podras escoger busqueda</p>
+    <a class="btn btn-light btn-xl" href="{% url 'Formulario Usuario' %}">Usuarios</a>
+    <a class="btn btn-light btn-xl" href="{% url 'Venta' %}">Ventas</a>
+    <a class="btn btn-light btn-xl" href="{% url 'Compra' %}">Compras</a>
+    
+    {% endblock %}

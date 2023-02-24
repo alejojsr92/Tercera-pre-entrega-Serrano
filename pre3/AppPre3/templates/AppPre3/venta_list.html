@@ -1,0 +1,43 @@
+{% extends "AppPre3/padre.html" %}
+
+{% load static %} 
+
+
+{% block titulo1 %}
+
+Esta es la lista de las compras ingresadas
+
+{% endblock %}
+
+{% block texto %}
+    {% for x in object_list %}
+    
+    <p class="text-white font-weight-bold">Nombre: {{x.nombreVenta}}</p>
+
+
+    
+        <a class="btn btn-primary btn-xl" href="{% url 'Detalle Venta' x.id %}">Detalle de Venta</a>
+    
+
+   
+        <a class="btn btn-primary btn-xl" href="{% url 'Editar Venta' x.id %}">Editar Venta</a>
+    
+
+ 
+        <a class="btn btn-primary btn-xl" href="{% url 'Borrar Venta' x.id %}" >Eliminar Venta</a>
+    
+    
+
+    {% endfor %}
+
+    {% endblock %}
+    <a class="btn btn-primary btn-xl" href="#about">COMENCEMOS</a>
+    {% block botones %}
+    
+    <h2 class="text-white mt-0">Formularios y busqueda</h2>
+    <hr class="divider divider-light" />
+    <a class="btn btn-light btn-xl" href="{% url 'Compra' %}">Compras</a>
+    <a class="btn btn-light btn-xl" href="{% url 'Crear Venta' %}">Agergar</a>
+    <a class="btn btn-light btn-xl" href="{% url 'Busqueda Venta' %}">Busqueda</a>
+    
+    {% endblock %}

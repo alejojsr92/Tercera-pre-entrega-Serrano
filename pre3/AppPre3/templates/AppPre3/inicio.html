@@ -5,25 +5,48 @@
 
 {% block titulo1 %}
 
-HOOOOOLAAAAAA!!!!!!!!!!
+{% if request.user.is_authenticated %}
+
+{{mensaje}}
+
+{% else %}
+
+HOOOOOOLAAAAAA!!!
+
+{% endif %}
 
 {% endblock %}
+
+
+{% if request.user.is_authenticated %}
+
+{% block texto %}
+
+Puedes cargar una imagen para tu perfil si lo deseas ahora
+
+<br><br><br>
+<a class="btn btn-primary btn-xl" href="{% url 'Add Avatar' %}">Cargar imagen</a>
+
+{% endblock %}
+
+{% else %}
 
 {% block texto1 %}
 
-<p class="text-white font-weight-bold">Bienvenido a mi pre-entrega 3</p>
+<p class="text-white font-weight-bold">Bienvenido a mi Proyecto Final</p>
 
-<a class="btn btn-primary btn-xl" href="#about">COMENCEMOS</a>
-
+<a class="btn btn-primary btn-xl" href="{% url 'Registro' %}">Registrate</a>
+<a class="btn btn-primary btn-xl" href="{% url 'Login' %}">Inicia Sesión</a>
 {% endblock %}
-<a class="btn btn-primary btn-xl" href="#about">COMENCEMOS</a>
+{% endif %}
+
 {% block botones %}
 
-<h2 class="text-white mt-0">Formularios y busqueda</h2>
-<hr class="divider divider-light" />
-<p class="text-white-75 mb-4">Recomendacion: Escoge cualquier formulario, despues podras escoger busqueda</p>
-<a class="btn btn-light btn-xl" href="{% url 'Formulario Usuario' %}">Usuarios</a>
-<a class="btn btn-light btn-xl" href="{% url 'Venta' %}">Ventas</a>
-<a class="btn btn-light btn-xl" href="{% url 'Compra' %}">Compras</a>
+        <h2 class="text-white mt-0">Escoge una opción</h2>
+        <hr class="divider divider-light" />
+        <p class="text-white-75 mb-4"></p>
+        <a class="btn btn-light btn-xl" href="{% url 'Compra' %}">Compra</a>
+        <a class="btn btn-light btn-xl" href="{% url 'Venta' %}">Venta</a>
+
 
 {% endblock %}

@@ -9,16 +9,21 @@ ESPACIO DE VENTAS
 
 {% endblock %}
 
-{% block texto1 %}
-Aqui podras escoger entre el formulario de Ventas o Busqueda de Ventas
+{% block texto %}
+Podras seleccionar: <br>
+Agregar: para registrar una ventas <br>
+Busqueda: para encontrar las ventas <br>
+Ver listas: para ver todas las ventas registradas <br>
+
 {% endblock %}
 
 {% block botones %}
-<h2 class="text-white mt-0">Formularios y busqueda</h2>
+<h2 class="text-white mt-0">Formularios, busqueda y CRUD</h2>
 <hr class="divider divider-light" />
-<p class="text-white-75 mb-4">Recomendacion: Escoge cualquier formulario, despues podras escoger busqueda</p>
-<a class="btn btn-light btn-xl" href="{% url 'Formulario Venta' %}">Formulario</a>
+<p class="text-white-75 mb-4">Escoge una opción</p>
+<a class="btn btn-light btn-xl" href="{% url 'Formulario Venta' %}">Agregar</a>
 <a class="btn btn-light btn-xl" href="{% url 'Busqueda Venta' %}">Busqueda</a>
+<a class="btn btn-light btn-xl" href="{% url 'Leer Venta' %}">Ver lista</a>
 
 
 {% endblock %}

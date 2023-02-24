@@ -1,0 +1,31 @@
+{% extends "AppPre3/padre.html" %}
+
+{% load static %} 
+
+
+{% block titulo1 %}
+
+Estos son los detalles de la venta
+
+{% endblock %}
+
+{% block texto %}
+    
+    <p class="text-white font-weight-bold">Nombre: {{venta.nombreVenta}}</p>
+    <p class="text-white font-weight-bold">Nombre: {{venta.fechaVenta}}</p>
+    <p class="text-white font-weight-bold">Nombre: {{venta.montoVenta}}</p>
+
+
+        <a class="btn btn-primary btn-xl" href="{% url 'Leer Venta' %}">Regresar</a>
+    
+    
+    {% endblock %}
+    {% block botones %}
+    
+    <h2 class="text-white mt-0">Formularios y busqueda</h2>
+    <hr class="divider divider-light" />
+    <a class="btn btn-light btn-xl" href="{% url 'Crear Venta' %}">Agregar</a>
+    <a class="btn btn-light btn-xl" href="{% url 'Leer Venta' %}">Ver lista</a>
+    <a class="btn btn-light btn-xl" href="{% url 'Compra' %}">Compras</a>
+    
+    {% endblock %}

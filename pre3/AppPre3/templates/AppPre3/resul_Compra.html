@@ -10,7 +10,9 @@ BUSQUEDA DE COMPRA
 {% endblock %}
 
 
-{% block texto1 %}
+{% block texto %}
+
+
     <p class="text-white font-weight-bold">Estas buscando: {{objeto}}</p>
 
     {% for x in resultado %}
@@ -26,6 +28,5 @@ BUSQUEDA DE COMPRA
     <hr class="divider divider-light" />
     <p class="text-white-75 mb-4">Recomendacion: Escoge cualquier formulario, despues podras escoger busqueda</p>
     <a class="btn btn-light btn-xl" href="{% url 'Venta' %}">Ventas</a>
-    <a class="btn btn-light btn-xl" href="{% url 'Formulario Usuario' %}">Usuario</a>
     
     {% endblock %}
