@@ -11,6 +11,7 @@ urlpatterns=[
     path("logout/", LogoutView.as_view(template_name="AppPre3/logout.html"), name="Logout"),
     path("editar/", Editar_Usuario, name="Editar User"),
     path("avatar/", add_avatar, name="Add Avatar"),
+    path ("about/",about ,name="About"),
 
     # path 3era preentrega
     path("compra/", Compra, name="Compra"),
@@ -27,7 +28,7 @@ urlpatterns=[
     #CRUDs usuario 3era preentrega
     path("leerUsuarios/", leer_usuarios, name="Leer Usuarios"),
     path("eliminarUsuarios/<user_name>/", eliminar_usuario, name="Eliminar Usuario"),
-    path("editarUsuarios/<user_name>/", editar_usuario, name="Editar Usuario"),
+    path("editarUsuarios/<user_name>/", Editar_Usuario, name="Editar Usuario"),
 
 
     #CRUDs de ventas

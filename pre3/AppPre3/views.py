@@ -80,6 +80,8 @@ def add_avatar(request):
 
 def inicio(request):
     return render(request,"AppPre3/inicio.html")
+def about(request):
+    return render(request,"AppPre3/about.html")
 @login_required
 def Usuario(request):
     return render(request,"AppPre3/usuario.html")
