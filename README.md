@@ -1,5 +1,3 @@
-# Tercera-pre-entrega-Serrano
-En la pag iniciail podras escoger entre crear usuario o ir a la seccion ventas o de compras 
-En la opcion de usuario solo crearas el registro y te llevara de vuelta a inicio 
-En la seccion de Ventas y de compras deberas escoger entre formulario y busqueda, llena primero los formularios 
-Despues de llenar los formularios podras ingresar a la busqueda y te mostrara todo los objetos que contengan la palabra clave que busque
+Proyecto final para el curso de Python de coderhouse
+La idea del proyecto fue crear un registro de compras y ventas para mi emprendimiento de venta de pasapalos
+En el se pueden crear usuarios y registrrar las comprar y ventas una vez el usuario este logueado tambien pueden agregar y modificar avatar de usuario y los datos personales del usuario como de las ventas
